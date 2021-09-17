@@ -572,12 +572,11 @@ TextButton_6.BorderSizePixel = 0
 TextButton_6.Position = UDim2.new(0.0833333358, 0, 0.0656565651, 0)
 TextButton_6.Size = UDim2.new(0, 123, 0, 27)
 TextButton_6.Font = Enum.Font.Sarpanch
-TextButton_6.Text = "+10 walkspeed"
+TextButton_6.Text = "-10 walkspeed"
 TextButton_6.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_6.TextSize = 14.000
 TextButton_6.MouseButton1Down:connect(function()
-	local plusspeed = 10
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.Walkspeed + plusspeed
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.Walkspeed - 10
 end)
 
 TextButton_7.Parent = Frame_3
@@ -586,11 +585,11 @@ TextButton_7.BorderSizePixel = 0
 TextButton_7.Position = UDim2.new(0.0833333358, 0, 0.232323229, 0)
 TextButton_7.Size = UDim2.new(0, 123, 0, 27)
 TextButton_7.Font = Enum.Font.Sarpanch
-TextButton_7.Text = "-10 walkspeed"
+TextButton_7.Text = "+10 walkspeed"
 TextButton_7.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_7.TextSize = 14.000
 TextButton_7.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed - 10
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed + 10
 end)
 
 TextButton_8.Parent = Frame_3
