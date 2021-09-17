@@ -576,7 +576,8 @@ TextButton_6.Text = "+10 walkspeed"
 TextButton_6.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_6.TextSize = 14.000
 TextButton_6.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.Walkspeed + 10
+	local plusspeed = 10
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.Walkspeed + plusspeed
 end)
 
 TextButton_7.Parent = Frame_3
