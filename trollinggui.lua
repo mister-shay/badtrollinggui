@@ -569,7 +569,7 @@ Frame_3.Size = UDim2.new(0, 144, 0, 198)
 TextButton_7.Parent = Frame_3
 TextButton_7.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_7.BorderSizePixel = 0
-TextButton_7.Position = UDim2.new(0.0833333358, 0, 0.132323229, 0)
+TextButton_7.Position = UDim2.new(0.0833333358, 0, 0.032323229, 0)
 TextButton_7.Size = UDim2.new(0, 123, 0, 27)
 TextButton_7.Font = Enum.Font.Sarpanch
 TextButton_7.Text = "+10 walkspeed"
@@ -582,7 +582,7 @@ end)
 TextButton_8.Parent = Frame_3
 TextButton_8.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_8.BorderSizePixel = 0
-TextButton_8.Position = UDim2.new(0.0833333358, 0, 0.309090906, 0)
+TextButton_8.Position = UDim2.new(0.0833333358, 0, 0.209090906, 0)
 TextButton_8.Size = UDim2.new(0, 123, 0, 27)
 TextButton_8.Font = Enum.Font.Sarpanch
 TextButton_8.Text = "normal walkspeed"
