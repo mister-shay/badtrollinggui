@@ -23,7 +23,7 @@ local TextLabel_4 = Instance.new("TextLabel")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game.CoreGui
 
 Frame.Name = "Frame"
 Frame.Parent = ScreenGui
@@ -638,7 +638,7 @@ TextButton_10.Text = ""
 TextButton_10.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_10.TextSize = 14.000
 TextButton_10.MouseButton1Down:connect(function()
-	script.Parent:Destroy()
+	Frame:Destroy()
 end)
 
 TextButton_Roundify_12px.Name = "TextButton_Roundify_12px"
