@@ -20,6 +20,7 @@ local TextLabel_3 = Instance.new("TextLabel")
 local TextButton_10 = Instance.new("TextButton")
 local TextButton_Roundify_12px = Instance.new("ImageLabel")
 local TextLabel_4 = Instance.new("TextLabel")
+local TextButton_11 = Instance.new("TextButton")
 
 --Properties:
 
@@ -498,7 +499,7 @@ TextButton_4.TextScaled = true
 TextButton_4.TextSize = 20.000
 TextButton_4.TextWrapped = true
 TextButton_4.MouseButton1Down:connect(function()
-	
+
 	local Player = game:GetService'Players'.LocalPlayer;
 	local UIS = game:GetService'UserInputService';
 
@@ -556,7 +557,7 @@ TextButton_5.TextScaled = true
 TextButton_5.TextSize = 24.000
 TextButton_5.TextWrapped = true
 TextButton_5.MouseButton1Down:connect(function()
-	
+
 	loadstring(game:GetObjects('rbxassetid://03171415932')[1].Source)()
 end)
 
@@ -655,3 +656,57 @@ TextLabel_4.Font = Enum.Font.Sarpanch
 TextLabel_4.Text = "dick fart gui"
 TextLabel_4.TextColor3 = Color3.fromRGB(36, 36, 35)
 TextLabel_4.TextSize = 25.000
+
+TextButton_11.Parent = ScrollingFrame
+TextButton_11.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_11.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_11.BorderSizePixel = 0
+TextButton_11.Position = UDim2.new(0.678346336, 0, 0.170097768, 0)
+TextButton_11.Size = UDim2.new(0, 55, 0, 52)
+TextButton_11.Font = Enum.Font.Sarpanch
+TextButton_11.Text = "Spectate"
+TextButton_11.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_11.TextScaled = true
+TextButton_11.TextSize = 24.000
+TextButton_11.TextWrapped = true
+TextButton_11.MouseButton1Down:connect(function()
+
+	gui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
+	nextb = Instance.new("TextButton", gui)
+	nextb.Position = UDim2.new(0.88,0,0.9,0)
+	nextb.Size = UDim2.new(0.1,0,0.07,0)
+	nextb.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+	nextb.Text = "Next"
+	prevb = nextb:Clone()
+	prevb.Position = UDim2.new(0.02,0,0.9,0)
+	prevb.Text = "Previous"
+	prevb.Parent = gui
+	plrNum = 1
+	for i,v in pairs(game.Players:GetPlayers()) do
+		if i == plrNum then
+			game.Workspace.Camera.CameraSubject = v.Character.Humanoid
+		end
+	end
+
+	prevb.MouseButton1Down:connect(function()
+		if plrNum ~= 1 then
+			plrNum = plrNum - 1
+		end
+		for i,v in pairs(game.Players:GetPlayers()) do
+			if i == plrNum then
+				game.Workspace.Camera.CameraSubject = v.Character.Humanoid
+			end
+		end
+	end)
+
+	nextb.MouseButton1Down:connect(function()
+		if plrNum < #game.Players:GetPlayers() then
+			plrNum = plrNum + 1
+			for i,v in pairs(game.Players:GetPlayers()) do
+				if i == plrNum then
+					game.Workspace.Camera.CameraSubject = v.Character.Humanoid
+				end
+			end
+		end
+	end)
+end)
