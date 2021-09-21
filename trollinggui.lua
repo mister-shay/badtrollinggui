@@ -957,4 +957,6 @@ TextButton_Roundify_6px.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_6px.SliceCenter = Rect.new(100, 100, 100, 100)
 TextButton_Roundify_6px.SliceScale = 0.060
 
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Welcome, Nick.", Text = "Dick Fart Gui Loaded."})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Welcome!", Text = "Dick Fart Gui Loaded."})
+wait(2)
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Synapse X?", Text = "more like synapse sex XDDD"})
