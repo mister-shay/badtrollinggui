@@ -17,12 +17,14 @@ local TextButton_4 = Instance.new("TextButton")
 local TextButton_5 = Instance.new("TextButton")
 local TextButton_6 = Instance.new("TextButton")
 local TextButton_7 = Instance.new("TextButton")
-local Frame_3 = Instance.new("Frame")
 local TextButton_8 = Instance.new("TextButton")
+local Frame_3 = Instance.new("Frame")
 local TextButton_9 = Instance.new("TextButton")
 local TextButton_10 = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
+local Frame_4 = Instance.new("Frame")
 local TextButton_11 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton_12 = Instance.new("TextButton")
 local TextButton_Roundify_6px = Instance.new("ImageLabel")
 
 --Properties:
@@ -33,7 +35,7 @@ Frame.Name = "Frame"
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BackgroundTransparency = 1.000
-Frame.Position = UDim2.new(0.343400925, 0, 0.467484623, 0)
+Frame.Position = UDim2.new(0.399337053, 0, 0.384015322, 0)
 Frame.Size = UDim2.new(0, 428, 0, 31)
 Frame.Image = "rbxassetid://3570695787"
 Frame.ImageColor3 = Color3.fromRGB(245, 203, 92)
@@ -41,7 +43,7 @@ Frame.ScaleType = Enum.ScaleType.Slice
 Frame.SliceCenter = Rect.new(100, 100, 100, 100)
 Frame.SliceScale = 0.070
 Frame.Active = true
-Frame.Draggable = TextButton
+Frame.Draggable = true
 
 Frame_2.Name = "Frame"
 Frame_2.Parent = Frame
@@ -116,7 +118,6 @@ TextButton_2.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 	end)
 	tool.Parent = game.Players.LocalPlayer.Backpack
-
 end)
 
 TextButton_3.Parent = ScrollingFrame
@@ -270,7 +271,6 @@ TextButton_3.MouseButton1Down:connect(function()
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[tbxVictim.Text].Character.HumanoidRootPart.CFrame
 		end
 	end)
-
 end)
 
 TextButton_4.Parent = ScrollingFrame
@@ -605,6 +605,7 @@ TextButton_6.MouseButton1Down:connect(function()
 			end
 		end
 	end)
+
 end)
 
 TextButton_7.Parent = ScrollingFrame
@@ -620,7 +621,6 @@ TextButton_7.TextSize = 25.000
 TextButton_7.TextWrapped = true
 TextButton_7.MouseButton1Down:connect(function()
 	
-
 	-- Fly GUI
 
 
@@ -715,207 +715,71 @@ TextButton_7.MouseButton1Down:connect(function()
 	end)
 end)
 
+TextButton_8.Parent = ScrollingFrame
+TextButton_8.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_8.BorderSizePixel = 0
+TextButton_8.Position = UDim2.new(0.374774933, 0, 0.29562968, 0)
+TextButton_8.Size = UDim2.new(0, 55, 0, 52)
+TextButton_8.Font = Enum.Font.Sarpanch
+TextButton_8.Text = "Bliss Universal Aimbot"
+TextButton_8.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 25.000
+TextButton_8.TextWrapped = true
+TextButton_8.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Cornyllius/ROBLOX/main/AIMBOT%20HUB.lua", true))()
+end)
+
 Frame_3.Parent = Frame_2
 Frame_3.BackgroundColor3 = Color3.fromRGB(51, 53, 51)
 Frame_3.BorderSizePixel = 0
-Frame_3.Position = UDim2.new(0.627039611, 0, 0.0882352963, 0)
-Frame_3.Size = UDim2.new(0, 144, 0, 198)
+Frame_3.Position = UDim2.new(0.622377634, 0, 0.0882352814, 0)
+Frame_3.Size = UDim2.new(0, 145, 0, 106)
 
 TextButton_9.Parent = Frame_3
 TextButton_9.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_9.BorderSizePixel = 0
-TextButton_9.Position = UDim2.new(0.0694444478, 0, 0.0606060624, 0)
-TextButton_9.Size = UDim2.new(0, 124, 0, 27)
+TextButton_9.Position = UDim2.new(0.0700631738, 0, 0.530807674, 0)
+TextButton_9.Size = UDim2.new(0, 124, 0, 36)
 TextButton_9.Font = Enum.Font.Sarpanch
-TextButton_9.Text = "walkspeed gui"
+TextButton_9.Text = "Noclip"
 TextButton_9.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_9.TextSize = 14.000
 TextButton_9.MouseButton1Down:connect(function()
-	--Speed Edit Made by Lindsay @ V3rmillion.net, this is simple as fuck.
-
-
-	--
-	local SpeedEdit = Instance.new('ScreenGui', game.Players.LocalPlayer.PlayerGui)
-	SpeedEdit.Name = 'SpeedEdit'
-	SpeedEdit.Enabled = true
-	SpeedEdit.ResetOnSpawn = false
-	--
-	local Drag = Instance.new('Frame', SpeedEdit)
-	Drag.Name = 'Drag'
-	Drag.Size = UDim2.new(0.3,0,0,20)
-	Drag.Active = true
-	Drag.Draggable = true
-	Drag.BackgroundTransparency = 0.5
-	--
-	local Speeed = Instance.new('TextBox', Drag)
-	Speeed.Position = UDim2.new(0,0,0,20)
-	Speeed.Name = 'Speeed'
-	Speeed.Size = Drag.Size
-	Speeed.Visible = false
-	Speeed.BackgroundTransparency = 0.7
-	Speeed.Text = 'Press x to focus.'
-	Speeed.TextSize = 8
-	--
-	local P = Instance.new('TextButton', Drag)
-	P.Name = 'P'
-	P.Position = UDim2.new(0,0,0,0)
-	P.Size = UDim2.new(0,20,0,20)
-	P.BackgroundTransparency = 1
-	P.Text = 'P'
-	P.TextSize = 14
-	P.Font = 'SciFi'
-	--
-	local ChangePlr = Instance.new('TextBox', Drag)
-	ChangePlr.Name = 'ChangePlr'
-	ChangePlr.BackgroundTransparency = 0.7
-	ChangePlr.Size = Speeed.Size
-	ChangePlr.Position = Speeed.Position
-	ChangePlr.Text = 'Player'
-	ChangePlr.Font = 'Legacy'
-	ChangePlr.TextSize = 8
-	ChangePlr.Visible = false
-	--
-	local ChangeValue = Instance.new('TextBox', Drag)
-	ChangeValue.Name = 'ChangeValue'
-	ChangeValue.BackgroundTransparency = 0.7
-	ChangeValue.Size = Speeed.Size
-	ChangeValue.Position = Speeed.Position
-	ChangeValue.Text = 'WalkSpeed'
-	ChangeValue.Font = 'Legacy'
-	ChangeValue.TextSize = 8
-	ChangeValue.Visible = false
-	--
-	local ChangeExec = Instance.new('TextButton', Drag)
-	ChangeExec.Name = 'ChangeExec'
-	ChangeExec.BackgroundTransparency = 0.7
-	ChangeExec.Size = Speeed.Size
-	ChangeExec.Position = Speeed.Position
-	ChangeExec.Text = "Change Player's walkspeed to WalkSpeed."
-	ChangeExec.Font = 'Legacy'
-	ChangeExec.TextSize = 10
-	ChangeExec.Visible = false
-	--
-	local OpenNClose = Instance.new('TextButton', Drag)
-	OpenNClose.Name = 'OpenNClose'
-	OpenNClose.Size = UDim2.new(0,15,0,20)
-	OpenNClose.Position = UDim2.new(0.9,10,0,0)
-	OpenNClose.Text = '+'
-	OpenNClose.BackgroundTransparency = 1
-	--
-	local Namee = Instance.new('TextLabel', Drag)
-	Namee.Name = 'Namee'
-	Namee.Size = UDim2.new(1,0,0,15)
-	Namee.Text = 'Walkspeed Edit'
-	Namee.Font = 'SciFi'
-	Namee.TextSize = 18
-	Namee.BackgroundTransparency = 1
-	--
-
-	local Speed = game.Players.LocalPlayer.PlayerGui.SpeedEdit.Drag.Speeed
-	local OpenNClose = game.Players.LocalPlayer.PlayerGui.SpeedEdit.Drag.OpenNClose
-	local Name = game.Players.LocalPlayer.PlayerGui.SpeedEdit.Drag.Namee
-	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local P = game.Players.LocalPlayer.PlayerGui.SpeedEdit.Drag.P
-	local ChangePlr = game.Players.LocalPlayer.PlayerGui.SpeedEdit.Drag.ChangePlr
-	local ChangeValue = game.Players.LocalPlayer.PlayerGui.SpeedEdit.Drag.ChangeValue
-	local ChangeExec = game.Players.LocalPlayer.PlayerGui.SpeedEdit.Drag.ChangeExec
-
-	OpenNClose.MouseButton1Down:connect(function()
-		if Speed.Visible == false and ChangeValue.Visible == false then
-			OpenNClose.Text = '-'
-			--This is appear
-			Speed.Visible = true
-			Speed:TweenSize(UDim2.new(1,0,0,20), 'InOut', 'Linear', 0.3, true)
-			wait(0.3)
-		elseif
-			Speed.Visible == true then
-			OpenNClose.Text = '+'
-			--This is go away
-			Speed:TweenSize(UDim2.new(1,0,0,0), 'InOut', 'Linear', 0.3, true)
-			Speed.Text = ''
-			wait(0.3)
-			Speed.Visible = false
-		end
-	end)
-
-	Mouse.KeyDown:connect(function(key)
-		if key == 'x' and Speed.Visible == true and ChangeValue.Visible == false then Speed:CaptureFocus()
-		elseif key == 'x' and ChangeValue.Visible == true and Speed.Visible == false then ChangePlr:CaptureFocus()
-		end
-	end)
-
-
-	Speed.FocusLost:connect(function(Entered)
-		if Entered and Speed.Text ~= '' then 
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed.Text else
-		end
-	end)
-
-	ChangePlr.FocusLost:connect(function(Enter)
-		if Enter and ChangeExec.Text ~= '' then
-			ChangeValue:CaptureFocus()
-		end
-	end)
-
-	ChangeValue.FocusLost:connect(function(Enterr)
-		if Enterr and ChangeValue.Text ~= '' then
-			local plr = ChangePlr.Text
-			local val = ChangeValue.Text
-			game.Players[plr].Character.Humanoid.WalkSpeed = val
-		end
-	end)
-
-	--Open
-	P.MouseButton1Down:connect(function()
-		if Speed.Visible == true and ChangeValue.Visible == true then print('Aye') elseif Speed.Visible == false and ChangeValue.Visible == false then
-			ChangePlr.Visible = true
-			ChangePlr:TweenSize(UDim2.new(1,0,0,20), 'InOut', 'Linear', 0.3, true)
-			ChangePlr.Text = 'Player'
-			wait(0.3)
-			ChangeValue.Visible = true
-			ChangeValue:TweenSizeAndPosition(UDim2.new(1,0,0,20), UDim2.new(0,0,0,40), 'InOut', 'Linear', 0.3, true)
-			ChangeValue.Text = 'WalkSpeed'
-			wait(0.3)
-			ChangeExec.Visible = true
-			ChangeExec:TweenSizeAndPosition(UDim2.new(1,0,0,20), UDim2.new(0,0,0,60), 'InOut', 'Linear', 0.3, true)
-			ChangeExec.Text = "Change Player's WalkSpeed"
-		end
-	end)
-
-	--Close
-	P.MouseButton1Down:connect(function()
-
-		ChangeExec:TweenSize(UDim2.new(1,0,0,0), 'InOut', 'Linear', 0.3, true)
-		ChangeExec.Text = ''
-		wait(0.3)
-		ChangeExec.Visible = false
-
-		if ChangeValue.Visible == true then
-			ChangeValue.Text = ''
-			ChangeValue:TweenSize(UDim2.new(1,0,0,0), 'InOut', 'Linear', 0.3, true)
-			wait(0.3)
-			ChangeValue.Visible = false
-
-			ChangePlr:TweenSize(UDim2.new(1,0,0,0), 'InOut', 'Linear', 0.3, true)
-			ChangePlr.Text = ''
-			wait(0.3)
-			ChangePlr.Visible = false
-
-		end
-	end)
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxScripts52/noclip/main/noclip.lua"), true))()
 end)
 
 TextButton_10.Parent = Frame_3
 TextButton_10.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_10.BorderSizePixel = 0
-TextButton_10.Position = UDim2.new(0.0694444478, 0, 0.772727251, 0)
-TextButton_10.Size = UDim2.new(0, 124, 0, 32)
+TextButton_10.Position = UDim2.new(0.0700631738, 0, 0.119011797, 0)
+TextButton_10.Size = UDim2.new(0, 124, 0, 36)
 TextButton_10.Font = Enum.Font.Sarpanch
-TextButton_10.Text = "Noclip"
+TextButton_10.Text = "walkspeed gui"
 TextButton_10.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_10.TextSize = 14.000
 TextButton_10.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxScripts52/noclip/main/noclip.lua"), true))()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/Tfmfvs5N'),true))()
+end)
+
+Frame_4.Parent = Frame_2
+Frame_4.BackgroundColor3 = Color3.fromRGB(51, 53, 51)
+Frame_4.BorderSizePixel = 0
+Frame_4.Position = UDim2.new(0.622377634, 0, 0.619948745, 0)
+Frame_4.Size = UDim2.new(0, 145, 0, 73)
+
+TextButton_11.Parent = Frame_4
+TextButton_11.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_11.BorderSizePixel = 0
+TextButton_11.Position = UDim2.new(0.0700633079, 0, 0.19178082, 0)
+TextButton_11.Size = UDim2.new(0, 124, 0, 46)
+TextButton_11.Font = Enum.Font.Sarpanch
+TextButton_11.Text = "Remote Spy"
+TextButton_11.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_11.TextSize = 14.000
+TextButton_11.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
 end)
 
 TextLabel_2.Parent = Frame
@@ -928,22 +792,22 @@ TextLabel_2.Text = "dick fart gui"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextSize = 20.000
 
-TextButton_11.Parent = Frame
-TextButton_11.BackgroundColor3 = Color3.fromRGB(255, 105, 97)
-TextButton_11.BackgroundTransparency = 1.000
-TextButton_11.BorderSizePixel = 0
-TextButton_11.Position = UDim2.new(0.90440613, 0, 0.18329744, 0)
-TextButton_11.Size = UDim2.new(0, 32, 0, 20)
-TextButton_11.Font = Enum.Font.SourceSans
-TextButton_11.Text = ""
-TextButton_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_11.TextSize = 14.000
-TextButton_11.MouseButton1Down:connect(function()
+TextButton_12.Parent = Frame
+TextButton_12.BackgroundColor3 = Color3.fromRGB(255, 105, 97)
+TextButton_12.BackgroundTransparency = 1.000
+TextButton_12.BorderSizePixel = 0
+TextButton_12.Position = UDim2.new(0.90440613, 0, 0.18329744, 0)
+TextButton_12.Size = UDim2.new(0, 32, 0, 20)
+TextButton_12.Font = Enum.Font.SourceSans
+TextButton_12.Text = ""
+TextButton_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_12.TextSize = 14.000
+TextButton_12.MouseButton1Down:connect(function()
 	Frame:Destroy()
 end)
 
 TextButton_Roundify_6px.Name = "TextButton_Roundify_6px"
-TextButton_Roundify_6px.Parent = TextButton_11
+TextButton_Roundify_6px.Parent = TextButton_12
 TextButton_Roundify_6px.Active = true
 TextButton_Roundify_6px.AnchorPoint = Vector2.new(0.5, 0.5)
 TextButton_Roundify_6px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -957,6 +821,4 @@ TextButton_Roundify_6px.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_6px.SliceCenter = Rect.new(100, 100, 100, 100)
 TextButton_Roundify_6px.SliceScale = 0.060
 
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Welcome!", Text = "Dick Fart Gui Loaded."})
-wait(2)
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Synapse X?", Text = "more like synapse sex XDDD"})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "DFG:", Text = "DFG has been loaded."})
