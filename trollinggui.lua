@@ -2,8 +2,6 @@
 --[I DONT NOT OWN THESE SCRIPTS]
 --made possible with Gui2Lua plugin
 
--- Variables:
-
 local StarterGui = game:GetService("StarterGui")
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("ImageLabel")
@@ -18,13 +16,15 @@ local TextButton_5 = Instance.new("TextButton")
 local TextButton_6 = Instance.new("TextButton")
 local TextButton_7 = Instance.new("TextButton")
 local TextButton_8 = Instance.new("TextButton")
-local Frame_3 = Instance.new("Frame")
 local TextButton_9 = Instance.new("TextButton")
 local TextButton_10 = Instance.new("TextButton")
-local Frame_4 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
 local TextButton_11 = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
 local TextButton_12 = Instance.new("TextButton")
+local Frame_4 = Instance.new("Frame")
+local TextButton_13 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton_14 = Instance.new("TextButton")
 local TextButton_Roundify_6px = Instance.new("ImageLabel")
 
 --Properties:
@@ -605,7 +605,6 @@ TextButton_6.MouseButton1Down:connect(function()
 			end
 		end
 	end)
-
 end)
 
 TextButton_7.Parent = ScrollingFrame
@@ -620,7 +619,8 @@ TextButton_7.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_7.TextSize = 25.000
 TextButton_7.TextWrapped = true
 TextButton_7.MouseButton1Down:connect(function()
-	
+
+
 	-- Fly GUI
 
 
@@ -722,13 +722,126 @@ TextButton_8.BorderSizePixel = 0
 TextButton_8.Position = UDim2.new(0.374774933, 0, 0.29562968, 0)
 TextButton_8.Size = UDim2.new(0, 55, 0, 52)
 TextButton_8.Font = Enum.Font.Sarpanch
-TextButton_8.Text = "Bliss Universal Aimbot"
+TextButton_8.Text = "Owlhub"
 TextButton_8.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_8.TextScaled = true
 TextButton_8.TextSize = 25.000
 TextButton_8.TextWrapped = true
 TextButton_8.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Cornyllius/ROBLOX/main/AIMBOT%20HUB.lua", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+TextButton_9.Parent = ScrollingFrame
+TextButton_9.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_9.BorderSizePixel = 0
+TextButton_9.Position = UDim2.new(0.673882067, 0, 0.29562968, 0)
+TextButton_9.Size = UDim2.new(0, 55, 0, 52)
+TextButton_9.Font = Enum.Font.Sarpanch
+TextButton_9.Text = "Citizen's Chatgui"
+TextButton_9.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_9.TextScaled = true
+TextButton_9.TextSize = 25.000
+TextButton_9.TextWrapped = true
+TextButton_9.MouseButton1Down:connect(function()
+	
+	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(k)
+		if k == 'r' then
+			cb:CaptureFocus()
+		end
+	end)
+	local gui = Instance.new("ScreenGui",game.CoreGui)
+	gui.Name = "OutputGui"
+	local Outputs = Instance.new("ScrollingFrame",gui)
+	Outputs.Visible=false
+	Outputs.BackgroundColor3=Color3.new(0,0,0)
+	Outputs.BorderColor3=Color3.new(0,0,0)
+	Outputs.BorderSizePixel=0
+	Outputs.Position = UDim2.new(.675,0,.725,0)
+	Outputs.Size=UDim2.new(.3,0,.2,0)
+	Outputs.CanvasSize=UDim2.new(1.2,0,2,0)
+	Outputs.ScrollBarThickness=6
+	Outputs.ScrollingEnabled=true
+	Outputs.CanvasPosition = Vector2.new(0, 10000)
+	local Output = function(text)
+		local color = Color3.new(1,1,1)
+		local outputList = Outputs:GetChildren()
+		for i,v in next,Outputs:GetChildren() do
+			if v:IsA("StringValue") then
+				table.remove(outputList, i)
+			else
+				v.Position = v.Position - UDim2.new(0,0,v.Size.Y.Scale/10,0)
+			end
+		end
+		local NewOutputLine = Instance.new("TextLabel",Outputs)
+		NewOutputLine.Text = text
+		NewOutputLine.Size = UDim2.new(1,0,.15,0)
+		NewOutputLine.Position = UDim2.new(0,0,.985,0)
+		NewOutputLine.Font = "SourceSansBold"
+		NewOutputLine.TextColor3 = color
+		NewOutputLine.TextStrokeTransparency = 0
+		NewOutputLine.BackgroundTransparency = 1
+		NewOutputLine.BorderSizePixel = 0
+		NewOutputLine.FontSize = "Size14"
+		NewOutputLine.TextXAlignment = "Left"
+		NewOutputLine.TextYAlignment = "Top"
+		NewOutputLine.ClipsDescendants = true
+		NewOutputLine.Name = "OutputLine"
+	end
+	local Visible = false
+	local Open_Close = Instance.new("TextButton",gui)
+	Open_Close.BackgroundColor3=Color3.new(0,0,0)
+	Open_Close.BackgroundTransparency=0.5
+	Open_Close.BorderColor3=Color3.new(0,0,0)
+	Open_Close.BorderSizePixel=0
+	Open_Close.Position=UDim2.new(.675,0,.9,0)
+	Open_Close.Size=UDim2.new(.3,0,.025,0)
+	Open_Close.Font=Enum.Font.SourceSansBold
+	Open_Close.FontSize=Enum.FontSize.Size12
+	Open_Close.Text="Chat Gui - Open"
+	Open_Close.TextColor3=Color3.new(255,255,255)
+	Open_Close.TextStrokeColor3=Color3.new(255,255,255)
+	Open_Close.TextStrokeTransparency=1
+	Open_Close.MouseButton1Click:connect(function()
+		if Visible == false then
+			Outputs.Visible = true
+			Open_Close.Position = UDim2.new(.675, 0, .7, 0)
+			Open_Close.Text = "Chat Gui - Close"
+			Visible = true
+		else
+			Outputs.Visible = false
+			Open_Close.Position = UDim2.new(.675, 0, .9, 0)
+			Open_Close.Text = "Chat Gui - Open"
+			Visible = false
+		end
+	end)
+	for _,plr in next,game.Players:GetChildren() do
+		if not plr:IsA("Player") then return end
+		plr.Chatted:connect(function(msg)
+			Output(plr.Name .. ": " .. msg)
+		end)
+	end
+	game.Players.PlayerAdded:connect(function(plr)
+		plr.Chatted:connect(function(msg)
+			Output(plr.Name .. ": " .. msg)
+		end)
+	end)
+end)
+
+TextButton_10.Parent = ScrollingFrame
+TextButton_10.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_10.BorderSizePixel = 0
+TextButton_10.Position = UDim2.new(0.0756677985, 0, 0.43818289, 0)
+TextButton_10.Size = UDim2.new(0, 55, 0, 52)
+TextButton_10.Font = Enum.Font.Sarpanch
+TextButton_10.Text = "Shed's Bypasser"
+TextButton_10.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_10.TextScaled = true
+TextButton_10.TextSize = 25.000
+TextButton_10.TextWrapped = true
+TextButton_10.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
 end)
 
 Frame_3.Parent = Frame_2
@@ -737,29 +850,29 @@ Frame_3.BorderSizePixel = 0
 Frame_3.Position = UDim2.new(0.622377634, 0, 0.0882352814, 0)
 Frame_3.Size = UDim2.new(0, 145, 0, 106)
 
-TextButton_9.Parent = Frame_3
-TextButton_9.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
-TextButton_9.BorderSizePixel = 0
-TextButton_9.Position = UDim2.new(0.0700631738, 0, 0.530807674, 0)
-TextButton_9.Size = UDim2.new(0, 124, 0, 36)
-TextButton_9.Font = Enum.Font.Sarpanch
-TextButton_9.Text = "Noclip"
-TextButton_9.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_9.TextSize = 14.000
-TextButton_9.MouseButton1Down:connect(function()
+TextButton_11.Parent = Frame_3
+TextButton_11.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_11.BorderSizePixel = 0
+TextButton_11.Position = UDim2.new(0.0700631738, 0, 0.530807674, 0)
+TextButton_11.Size = UDim2.new(0, 124, 0, 36)
+TextButton_11.Font = Enum.Font.Sarpanch
+TextButton_11.Text = "Noclip"
+TextButton_11.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_11.TextSize = 14.000
+TextButton_11.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxScripts52/noclip/main/noclip.lua"), true))()
 end)
 
-TextButton_10.Parent = Frame_3
-TextButton_10.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
-TextButton_10.BorderSizePixel = 0
-TextButton_10.Position = UDim2.new(0.0700631738, 0, 0.119011797, 0)
-TextButton_10.Size = UDim2.new(0, 124, 0, 36)
-TextButton_10.Font = Enum.Font.Sarpanch
-TextButton_10.Text = "walkspeed gui"
-TextButton_10.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_10.TextSize = 14.000
-TextButton_10.MouseButton1Down:connect(function()
+TextButton_12.Parent = Frame_3
+TextButton_12.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_12.BorderSizePixel = 0
+TextButton_12.Position = UDim2.new(0.0700631738, 0, 0.119011797, 0)
+TextButton_12.Size = UDim2.new(0, 124, 0, 36)
+TextButton_12.Font = Enum.Font.Sarpanch
+TextButton_12.Text = "walkspeed gui"
+TextButton_12.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_12.TextSize = 14.000
+TextButton_12.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(('https://pastebin.com/raw/Tfmfvs5N'),true))()
 end)
 
@@ -769,16 +882,16 @@ Frame_4.BorderSizePixel = 0
 Frame_4.Position = UDim2.new(0.622377634, 0, 0.619948745, 0)
 Frame_4.Size = UDim2.new(0, 145, 0, 73)
 
-TextButton_11.Parent = Frame_4
-TextButton_11.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
-TextButton_11.BorderSizePixel = 0
-TextButton_11.Position = UDim2.new(0.0700633079, 0, 0.19178082, 0)
-TextButton_11.Size = UDim2.new(0, 124, 0, 46)
-TextButton_11.Font = Enum.Font.Sarpanch
-TextButton_11.Text = "Remote Spy"
-TextButton_11.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_11.TextSize = 14.000
-TextButton_11.MouseButton1Down:connect(function()
+TextButton_13.Parent = Frame_4
+TextButton_13.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_13.BorderSizePixel = 0
+TextButton_13.Position = UDim2.new(0.0700633079, 0, 0.19178082, 0)
+TextButton_13.Size = UDim2.new(0, 124, 0, 46)
+TextButton_13.Font = Enum.Font.Sarpanch
+TextButton_13.Text = "Remote Spy"
+TextButton_13.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_13.TextSize = 14.000
+TextButton_13.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
 end)
 
@@ -792,22 +905,22 @@ TextLabel_2.Text = "dick fart gui"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextSize = 20.000
 
-TextButton_12.Parent = Frame
-TextButton_12.BackgroundColor3 = Color3.fromRGB(255, 105, 97)
-TextButton_12.BackgroundTransparency = 1.000
-TextButton_12.BorderSizePixel = 0
-TextButton_12.Position = UDim2.new(0.90440613, 0, 0.18329744, 0)
-TextButton_12.Size = UDim2.new(0, 32, 0, 20)
-TextButton_12.Font = Enum.Font.SourceSans
-TextButton_12.Text = ""
-TextButton_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_12.TextSize = 14.000
-TextButton_12.MouseButton1Down:connect(function()
+TextButton_14.Parent = Frame
+TextButton_14.BackgroundColor3 = Color3.fromRGB(255, 105, 97)
+TextButton_14.BackgroundTransparency = 1.000
+TextButton_14.BorderSizePixel = 0
+TextButton_14.Position = UDim2.new(0.90440613, 0, 0.18329744, 0)
+TextButton_14.Size = UDim2.new(0, 32, 0, 20)
+TextButton_14.Font = Enum.Font.SourceSans
+TextButton_14.Text = ""
+TextButton_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_14.TextSize = 14.000
+TextButton_14.MouseButton1Down:connect(function()
 	Frame:Destroy()
 end)
 
 TextButton_Roundify_6px.Name = "TextButton_Roundify_6px"
-TextButton_Roundify_6px.Parent = TextButton_12
+TextButton_Roundify_6px.Parent = TextButton_14
 TextButton_Roundify_6px.Active = true
 TextButton_Roundify_6px.AnchorPoint = Vector2.new(0.5, 0.5)
 TextButton_Roundify_6px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -821,4 +934,4 @@ TextButton_Roundify_6px.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_6px.SliceCenter = Rect.new(100, 100, 100, 100)
 TextButton_Roundify_6px.SliceScale = 0.060
 
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "DFG:", Text = "DFG has been loaded."})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Dick Fart Gui has loaded.", Text = "have fun retard"})
