@@ -56,6 +56,9 @@ TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = ""
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
+TextButton.MouseButton1Down:connect(function()
+	Frame:Destroy()
+end)
 
 TextButton_Roundify_6px.Name = "TextButton_Roundify_6px"
 TextButton_Roundify_6px.Parent = TextButton
