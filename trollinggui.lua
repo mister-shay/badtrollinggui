@@ -2,6 +2,8 @@
 --[I DONT NOT OWN THESE SCRIPTS]
 --made possible with Gui2Lua plugin
 
+--DO NOT GIVE THIS SOURCE CODE TO ANYONE WITHOUT MY PERMISSION
+
 local StarterGui = game:GetService("StarterGui")
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("ImageLabel")
