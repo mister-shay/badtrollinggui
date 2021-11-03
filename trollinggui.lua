@@ -1,8 +1,7 @@
---made my mister_shay
---[I DONT NOT OWN THESE SCRIPTS]
---made possible with Gui2Lua plugin
+-- Gui to Lua
+-- Version: 3.2
 
---DO NOT GIVE THIS SOURCE CODE TO ANYONE WITHOUT MY PERMISSION
+-- Instances:
 
 local StarterGui = game:GetService("StarterGui")
 local ScreenGui = Instance.new("ScreenGui")
@@ -116,7 +115,23 @@ TextButton_3.Text = "Noclip"
 TextButton_3.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_3.TextSize = 14.000
 TextButton_3.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxScripts52/noclip/main/noclip.lua"), true))()
+	--[[ Press "E" to toggle noclip]]
+	noclip = false
+	game:GetService('RunService').Stepped:connect(function()
+		if noclip then
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	plr = game.Players.LocalPlayer
+	mouse = plr:GetMouse()
+	mouse.KeyDown:connect(function(key)
+
+		if key == "e" then
+			noclip = not noclip
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Loaded.", Text = "Press E to noclip."})
 end)
 
 Frame_4.Parent = Frame_2
