@@ -3,7 +3,6 @@
 
 -- Instances:
 
-local StarterGui = game:GetService("StarterGui")
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("ImageLabel")
 local TextButton = Instance.new("TextButton")
@@ -12,9 +11,8 @@ local Frame_2 = Instance.new("ImageLabel")
 local Frame_3 = Instance.new("Frame")
 local TextButton_2 = Instance.new("TextButton")
 local TextButton_3 = Instance.new("TextButton")
-local Frame_4 = Instance.new("Frame")
-local TextButton_4 = Instance.new("TextButton")
 local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextButton_4 = Instance.new("TextButton")
 local TextButton_5 = Instance.new("TextButton")
 local TextButton_6 = Instance.new("TextButton")
 local TextButton_7 = Instance.new("TextButton")
@@ -23,9 +21,8 @@ local TextButton_9 = Instance.new("TextButton")
 local TextButton_10 = Instance.new("TextButton")
 local TextButton_11 = Instance.new("TextButton")
 local TextButton_12 = Instance.new("TextButton")
-local TextButton_13 = Instance.new("TextButton")
-local TextButton_14 = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -105,52 +102,18 @@ TextButton_2.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(('https://pastebin.com/raw/Tfmfvs5N'),true))()
 end)
 
+
 TextButton_3.Parent = Frame_3
 TextButton_3.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0.0700633079, 0, 0.570973814, 0)
-TextButton_3.Size = UDim2.new(0, 124, 0, 34)
+TextButton_3.Position = UDim2.new(0.0700633079, 0, 0.583533525, 0)
+TextButton_3.Size = UDim2.new(0, 124, 0, 32)
 TextButton_3.Font = Enum.Font.Sarpanch
-TextButton_3.Text = "Noclip"
+TextButton_3.Text = "infinite yield"
 TextButton_3.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_3.TextSize = 14.000
 TextButton_3.MouseButton1Down:connect(function()
-	--[[ Press "E" to toggle noclip]]
-	noclip = false
-	game:GetService('RunService').Stepped:connect(function()
-		if noclip then
-			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-		end
-	end)
-	plr = game.Players.LocalPlayer
-	mouse = plr:GetMouse()
-	mouse.KeyDown:connect(function(key)
-
-		if key == "e" then
-			noclip = not noclip
-			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-		end
-	end)
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Loaded.", Text = "Press E to noclip."})
-end)
-
-Frame_4.Parent = Frame_2
-Frame_4.BackgroundColor3 = Color3.fromRGB(51, 53, 51)
-Frame_4.BorderSizePixel = 0
-Frame_4.Position = UDim2.new(0.620046616, 0, 0.585622549, 0)
-Frame_4.Size = UDim2.new(0, 145, 0, 67)
-
-TextButton_4.Parent = Frame_4
-TextButton_4.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
-TextButton_4.BorderSizePixel = 0
-TextButton_4.Position = UDim2.new(0.0700633079, 0, 0.19178082, 0)
-TextButton_4.Size = UDim2.new(0, 124, 0, 46)
-TextButton_4.Font = Enum.Font.Sarpanch
-TextButton_4.Text = "Remote Spy"
-TextButton_4.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_4.TextSize = 14.000
-TextButton_4.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 ScrollingFrame.Parent = Frame_2
@@ -159,22 +122,23 @@ ScrollingFrame.BackgroundColor3 = Color3.fromRGB(51, 53, 51)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(0.0401755013, 0, 0.0836751387, 0)
 ScrollingFrame.Size = UDim2.new(0, 224, 0, 176)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 23.2999878)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1.29999995, 0)
 ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
 
-TextButton_5.Parent = ScrollingFrame
-TextButton_5.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
-TextButton_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextButton_5.BorderSizePixel = 0
-TextButton_5.Position = UDim2.new(0.675120115, 0, 0.0406760611, 0)
-TextButton_5.Size = UDim2.new(0, 55, 0, 52)
-TextButton_5.Font = Enum.Font.Sarpanch
-TextButton_5.Text = "sus gui"
-TextButton_5.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_5.TextScaled = true
-TextButton_5.TextSize = 20.000
-TextButton_5.TextWrapped = true
-TextButton_5.MouseButton1Down:connect(function()
+TextButton_4.Parent = ScrollingFrame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0.675120115, 0, 0.0406760611, 0)
+TextButton_4.Size = UDim2.new(0, 55, 0, 52)
+TextButton_4.Font = Enum.Font.Sarpanch
+TextButton_4.Text = "sus gui"
+TextButton_4.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 20.000
+TextButton_4.TextWrapped = true
+TextButton_4.MouseButton1Down:connect(function()
 	local SimpleSexGUI = Instance.new("ScreenGui")
 
 	local FGUI = Instance.new("Frame")
@@ -315,116 +279,167 @@ TextButton_5.MouseButton1Down:connect(function()
 	end)
 end)
 
+
+TextButton_5.Parent = ScrollingFrame
+TextButton_5.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_5.BorderSizePixel = 0
+TextButton_5.Position = UDim2.new(0.669417739, 0, 0.48111546, 0)
+TextButton_5.Size = UDim2.new(0, 55, 0, 52)
+TextButton_5.Font = Enum.Font.Sarpanch
+TextButton_5.Text = "ChatLog"
+TextButton_5.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 25.000
+TextButton_5.TextWrapped = true
+TextButton_5.MouseButton1Down:connect(function()
+	-- Version: 2.82
+	-- Instances:
+	local ChatGui = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local LogPanel = Instance.new("ScrollingFrame")
+	local Close = Instance.new("TextButton")
+	local Mini = Instance.new("TextButton")
+	local Log = Instance.new("TextButton")
+	local title = Instance.new("TextLabel")
+	--Properties:
+	ChatGui.Name = "ChatGui"
+	ChatGui.Parent = game.Players.LocalPlayer.PlayerGui
+	ChatGui.ResetOnSpawn = false
+
+	Frame.Parent = ChatGui
+	Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+	Frame.BorderSizePixel = 0
+	Frame.Position = UDim2.new(0.0278396439, 0, 0.565217376, 0)
+	Frame.Size = UDim2.new(0, 392, 0, 25)
+	Frame.Active = true
+	Frame.Draggable = true
+
+	LogPanel.Name = "LogPanel"
+	LogPanel.Parent = Frame
+	LogPanel.BackgroundColor3 = Color3.new(0, 0, 0)
+	LogPanel.BorderColor3 = Color3.new(0.223529, 0.223529, 0.223529)
+	LogPanel.Position = UDim2.new(-0.000221580267, 0, 0.968695641, 0)
+	LogPanel.Size = UDim2.new(0, 392, 0, 203)
+	LogPanel.ScrollBarThickness = 5
+	LogPanel.ScrollingEnabled = true
+	LogPanel.CanvasSize=UDim2.new(2,0,100,0)
+
+	Close.Name = "Close"
+	Close.Parent = Frame
+	Close.BackgroundColor3 = Color3.new(1, 1, 1)
+	Close.BackgroundTransparency = 1
+	Close.Position = UDim2.new(0.823979557, 0, 0.0399999991, 0)
+	Close.Size = UDim2.new(0, 69, 0, 24)
+	Close.Font = Enum.Font.SourceSans
+	Close.Text = "Close"
+	Close.TextColor3 = Color3.new(1, 1, 1)
+	Close.TextSize = 14
+
+	Mini.Name = "Mini"
+	Mini.Parent = Frame
+	Mini.BackgroundColor3 = Color3.new(1, 1, 1)
+	Mini.BackgroundTransparency = 1
+	Mini.Position = UDim2.new(0.647959173, 0, 0, 0)
+	Mini.Size = UDim2.new(0, 69, 0, 24)
+	Mini.Font = Enum.Font.SourceSans
+	Mini.Text = "Minimize"
+	Mini.TextColor3 = Color3.new(1, 1, 1)
+	Mini.TextSize = 14
+
+	Log.Name = "Log"
+	Log.Parent = Frame
+	Log.BackgroundColor3 = Color3.new(1, 1, 1)
+	Log.BackgroundTransparency = 1
+	Log.Position = UDim2.new(0.293367326, 0, 0, 0)
+	Log.Size = UDim2.new(0, 69, 0, 24)
+	Log.Font = Enum.Font.SourceSans
+	Log.Text = "Log Chat [ON]"
+	Log.TextColor3 = Color3.new(1, 1, 1)
+	Log.TextSize = 14
+
+	title.Name = "title"
+	title.Parent = Frame
+	title.BackgroundColor3 = Color3.new(1, 1, 1)
+	title.BackgroundTransparency = 1
+	title.Size = UDim2.new(0, 115, 0, 24)
+	title.Font = Enum.Font.SourceSans
+	title.Text = "Chat GUI"
+	title.TextColor3 = Color3.new(1, 1, 1)
+	title.TextSize = 14
+	title.TextXAlignment = Enum.TextXAlignment.Left
+	-- Scripts:
+	local logging = true
+	local minimized = false
+	Log.MouseButton1Down:Connect(function()
+		logging = not logging
+		if logging then Log.Text = "Log Chat [ON]" else Log.Text = "Log Chat [OFF]" end
+	end)
+	Mini.MouseButton1Down:Connect(function()
+		if minimized then
+			LogPanel:TweenSize(UDim2.new(0, 392, 0, 203), "InOut", "Sine", 0.5, false, nil)
+		else
+			LogPanel:TweenSize(UDim2.new(0, 392, 0, 0), "InOut", "Sine", 0.5, false, nil)
+		end
+		minimized = not minimized
+	end)
+	Close.MouseButton1Down:Connect(function()
+		ChatGui:Destroy()
+	end)
+
+	local prevOutputPos = 0
+	function output(plr, msg)
+		if not logging then return end
+		local colour = Color3.fromRGB(255,255,255)
+
+		if string.sub(msg, 1,1) == ":" or string.sub(msg,1,1) == ";" then colour = Color3.fromRGB(255,0,0) elseif string.sub(msg,1,2) == "/w" or string.sub(msg,1,7) == "/whisper" or string.sub(msg,1,5) == "/team" or string.sub(msg,1,2) == "/t" then colour = Color3.fromRGB(0,0,255) else colour = Color3.fromRGB(255,255,255) end
+
+		local o = Instance.new("TextLabel",LogPanel)
+		o.Text = plr.Name .. ": " .. msg
+		o.Size = UDim2.new(0.5,0,.006,0)
+		o.Position = UDim2.new(0,0,.007 + prevOutputPos ,0)
+		o.Font = Enum.Font.SourceSansSemibold
+		o.TextColor3 = colour
+		o.TextStrokeTransparency = 0
+		o.BackgroundTransparency = 0
+		o.BackgroundColor3 = Color3.new(0,0,0)
+		o.BorderSizePixel = 0
+		o.BorderColor3 = Color3.new(0,0,0)
+		o.FontSize = "Size14"
+		o.TextXAlignment = Enum.TextXAlignment.Left
+		o.ClipsDescendants = true
+		prevOutputPos = prevOutputPos + 0.007
+	end
+
+	for i,v in pairs(game.Players:GetChildren()) do
+		v.Chatted:Connect(function(msg)
+			output(v, msg)
+		end)
+	end
+
+	game.Players.ChildAdded:Connect(function(plr)
+		if plr:IsA("Player") then
+			plr.Chatted:Connect(function(msg)
+				output(plr, msg)
+			end)
+		end
+	end)
+end)
+
+
 TextButton_6.Parent = ScrollingFrame
 TextButton_6.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
 TextButton_6.BorderSizePixel = 0
-TextButton_6.Position = UDim2.new(0.669417739, 0, 0.48111546, 0)
+TextButton_6.Position = UDim2.new(0.0756677538, 0, 0.265659302, 0)
 TextButton_6.Size = UDim2.new(0, 55, 0, 52)
 TextButton_6.Font = Enum.Font.Sarpanch
-TextButton_6.Text = "Citizen's Chatgui"
+TextButton_6.Text = "inf jump"
 TextButton_6.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_6.TextScaled = true
-TextButton_6.TextSize = 25.000
+TextButton_6.TextSize = 20.000
 TextButton_6.TextWrapped = true
 TextButton_6.MouseButton1Down:connect(function()
-	ame.Players.LocalPlayer:GetMouse().KeyDown:connect(function(k)
-		if k == 'r' then
-			cb:CaptureFocus()
-		end
-	end)
-	local gui = Instance.new("ScreenGui",game.CoreGui)
-	gui.Name = "OutputGui"
-	local Outputs = Instance.new("ScrollingFrame",gui)
-	Outputs.Visible=false
-	Outputs.BackgroundColor3=Color3.new(0,0,0)
-	Outputs.BorderColor3=Color3.new(0,0,0)
-	Outputs.BorderSizePixel=0
-	Outputs.Position = UDim2.new(.675,0,.725,0)
-	Outputs.Size=UDim2.new(.3,0,.2,0)
-	Outputs.CanvasSize=UDim2.new(1.2,0,2,0)
-	Outputs.ScrollBarThickness=6
-	Outputs.ScrollingEnabled=true
-	Outputs.CanvasPosition = Vector2.new(0, 10000)
-	local Output = function(text)
-		local color = Color3.new(1,1,1)
-		local outputList = Outputs:GetChildren()
-		for i,v in next,Outputs:GetChildren() do
-			if v:IsA("StringValue") then
-				table.remove(outputList, i)
-			else
-				v.Position = v.Position - UDim2.new(0,0,v.Size.Y.Scale/10,0)
-			end
-		end
-		local NewOutputLine = Instance.new("TextLabel",Outputs)
-		NewOutputLine.Text = text
-		NewOutputLine.Size = UDim2.new(1,0,.15,0)
-		NewOutputLine.Position = UDim2.new(0,0,.985,0)
-		NewOutputLine.Font = "SourceSansBold"
-		NewOutputLine.TextColor3 = color
-		NewOutputLine.TextStrokeTransparency = 0
-		NewOutputLine.BackgroundTransparency = 1
-		NewOutputLine.BorderSizePixel = 0
-		NewOutputLine.FontSize = "Size14"
-		NewOutputLine.TextXAlignment = "Left"
-		NewOutputLine.TextYAlignment = "Top"
-		NewOutputLine.ClipsDescendants = true
-		NewOutputLine.Name = "OutputLine"
-	end
-	local Visible = false
-	local Open_Close = Instance.new("TextButton",gui)
-	Open_Close.BackgroundColor3=Color3.new(0,0,0)
-	Open_Close.BackgroundTransparency=0.5
-	Open_Close.BorderColor3=Color3.new(0,0,0)
-	Open_Close.BorderSizePixel=0
-	Open_Close.Position=UDim2.new(.675,0,.9,0)
-	Open_Close.Size=UDim2.new(.3,0,.025,0)
-	Open_Close.Font=Enum.Font.SourceSansBold
-	Open_Close.FontSize=Enum.FontSize.Size12
-	Open_Close.Text="Chat Gui - Open"
-	Open_Close.TextColor3=Color3.new(255,255,255)
-	Open_Close.TextStrokeColor3=Color3.new(255,255,255)
-	Open_Close.TextStrokeTransparency=1
-	Open_Close.MouseButton1Click:connect(function()
-		if Visible == false then
-			Outputs.Visible = true
-			Open_Close.Position = UDim2.new(.675, 0, .7, 0)
-			Open_Close.Text = "Chat Gui - Close"
-			Visible = true
-		else
-			Outputs.Visible = false
-			Open_Close.Position = UDim2.new(.675, 0, .9, 0)
-			Open_Close.Text = "Chat Gui - Open"
-			Visible = false
-		end
-	end)
-	for _,plr in next,game.Players:GetChildren() do
-		if not plr:IsA("Player") then return end
-		plr.Chatted:connect(function(msg)
-			Output(plr.Name .. ": " .. msg)
-		end)
-	end
-	game.Players.PlayerAdded:connect(function(plr)
-		plr.Chatted:connect(function(msg)
-			Output(plr.Name .. ": " .. msg)
-		end)
-	end)
-end)
-
-TextButton_7.Parent = ScrollingFrame
-TextButton_7.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
-TextButton_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextButton_7.BorderSizePixel = 0
-TextButton_7.Position = UDim2.new(0.0756677538, 0, 0.265659302, 0)
-TextButton_7.Size = UDim2.new(0, 55, 0, 52)
-TextButton_7.Font = Enum.Font.Sarpanch
-TextButton_7.Text = "inf jump"
-TextButton_7.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_7.TextScaled = true
-TextButton_7.TextSize = 20.000
-TextButton_7.TextWrapped = true
-TextButton_7.MouseButton1Down:connect(function()
-	
 	local Player = game:GetService'Players'.LocalPlayer;
 	local UIS = game:GetService'UserInputService';
 
@@ -449,31 +464,37 @@ TextButton_8.Parent = ScrollingFrame
 TextButton_8.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
 TextButton_8.BorderSizePixel = 0
-TextButton_8.Position = UDim2.new(0.370310664, 0, 0.48111546, 0)
+TextButton_8.Position = UDim2.new(0.072704047, 0, 0.0386068709, 0)
 TextButton_8.Size = UDim2.new(0, 55, 0, 52)
 TextButton_8.Font = Enum.Font.Sarpanch
-TextButton_8.Text = "Owlhub"
+TextButton_8.Text = "invisfling"
 TextButton_8.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_8.TextScaled = true
-TextButton_8.TextSize = 25.000
+TextButton_8.TextSize = 20.000
 TextButton_8.TextWrapped = true
 TextButton_8.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-end)
+	local Player = game:GetService'Players'.LocalPlayer;
+	local UIS = game:GetService'UserInputService';
 
-TextButton_9.Parent = ScrollingFrame
-TextButton_9.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
-TextButton_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextButton_9.BorderSizePixel = 0
-TextButton_9.Position = UDim2.new(0.072704047, 0, 0.0386068709, 0)
-TextButton_9.Size = UDim2.new(0, 55, 0, 52)
-TextButton_9.Font = Enum.Font.Sarpanch
-TextButton_9.Text = "invisfling"
-TextButton_9.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_9.TextScaled = true
-TextButton_9.TextSize = 20.000
-TextButton_9.TextWrapped = true
-TextButton_9.MouseButton1Down:connect(function()
+	_G.JumpHeight = 50;
+
+	function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+	UIS.InputBegan:connect(function(UserInput)
+		if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+			Action(Player.Character.Humanoid, function(self)
+				if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+					Action(self.Parent.HumanoidRootPart, function(self)
+						self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+					end)
+				end
+			end)
+		end
+	end)
+	--infjump
+
+	---------------
+
 	spawn(function()
 		local message = Instance.new("Message",workspace)
 		message.Text = "Loaded press z to execute inviseble , press x to respawn)"
@@ -707,233 +728,65 @@ TextButton_9.MouseButton1Down:connect(function()
 	end)
 end)
 
+TextButton_9.Parent = ScrollingFrame
+TextButton_9.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
+TextButton_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_9.BorderSizePixel = 0
+TextButton_9.Position = UDim2.new(0.0756677762, 0, 0.48111546, 0)
+TextButton_9.Size = UDim2.new(0, 55, 0, 52)
+TextButton_9.Font = Enum.Font.Sarpanch
+TextButton_9.Text = "Fly"
+TextButton_9.TextColor3 = Color3.fromRGB(232, 237, 223)
+TextButton_9.TextSize = 25.000
+TextButton_9.TextWrapped = true
+
 TextButton_10.Parent = ScrollingFrame
 TextButton_10.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
 TextButton_10.BorderSizePixel = 0
-TextButton_10.Position = UDim2.new(0.0756677762, 0, 0.48111546, 0)
+TextButton_10.Position = UDim2.new(0.673882067, 0, 0.263531655, 0)
 TextButton_10.Size = UDim2.new(0, 55, 0, 52)
 TextButton_10.Font = Enum.Font.Sarpanch
-TextButton_10.Text = "Fly"
+TextButton_10.Text = "Spectate"
 TextButton_10.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_10.TextSize = 25.000
+TextButton_10.TextScaled = true
+TextButton_10.TextSize = 24.000
 TextButton_10.TextWrapped = true
-TextButton_10.MouseButton1Down:connect(function()
-	-- Fly GUI
-
-
-	-- Instances:
-
-	local fly = Instance.new("ScreenGui")
-	local epic = Instance.new("Frame")
-	local backgroundtitle = Instance.new("TextLabel")
-	local creator = Instance.new("TextLabel")
-	local title = Instance.new("TextLabel")
-	local close = Instance.new("TextButton")
-	local flybutton = Instance.new("TextButton")
-
-	--Properties:
-
-	fly.Name = "fly"
-	fly.Parent = game.CoreGui
-	fly.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-	epic.Name = "epic"
-	epic.Parent = fly
-	epic.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	epic.Position = UDim2.new(0.0911376476, 0, 0.466830462, 0)
-	epic.Size = UDim2.new(0, 181, 0, 178)
-	epic.Active = true
-	epic.Draggable = true
-
-	backgroundtitle.Name = "backgroundtitle"
-	backgroundtitle.Parent = epic
-	backgroundtitle.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
-	backgroundtitle.Size = UDim2.new(0, 182, 0, 43)
-	backgroundtitle.Font = Enum.Font.SciFi
-	backgroundtitle.Text = ""
-	backgroundtitle.TextColor3 = Color3.fromRGB(0, 0, 0)
-	backgroundtitle.TextScaled = true
-	backgroundtitle.TextSize = 14.000
-	backgroundtitle.TextWrapped = true
-
-	creator.Name = "creator"
-	creator.Parent = epic
-	creator.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
-	creator.Position = UDim2.new(0.00442049652, 0, 0.762519121, 0)
-	creator.Size = UDim2.new(0, 181, 0, 42)
-	creator.Font = Enum.Font.SourceSans
-	creator.Text = "Made by Arowix"
-	creator.TextColor3 = Color3.fromRGB(0, 0, 0)
-	creator.TextScaled = true
-	creator.TextSize = 14.000
-	creator.TextWrapped = true
-
-	title.Name = "title"
-	title.Parent = epic
-	title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	title.BackgroundTransparency = 1.000
-	title.Position = UDim2.new(0.0497237556, 0, 0, 0)
-	title.Size = UDim2.new(0, 119, 0, 43)
-	title.Font = Enum.Font.SciFi
-	title.Text = "Fly"
-	title.TextColor3 = Color3.fromRGB(0, 0, 0)
-	title.TextScaled = true
-	title.TextSize = 14.000
-	title.TextWrapped = true
-
-	close.Name = "close"
-	close.Parent = epic
-	close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	close.Position = UDim2.new(0.76795578, 0, 0, 0)
-	close.Size = UDim2.new(0, 43, 0, 43)
-	close.Font = Enum.Font.GothamBlack
-	close.Text = "X"
-	close.TextColor3 = Color3.fromRGB(0, 0, 0)
-	close.TextScaled = true
-	close.TextSize = 14.000
-	close.TextWrapped = true
-	close.MouseButton1Down:connect(function()
-		epic.Visible = false
-	end)
-
-	flybutton.Name = "flybutton"
-	flybutton.Parent = epic
-	flybutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	flybutton.Position = UDim2.new(0.243093923, 0, 0.344781578, 0)
-	flybutton.Size = UDim2.new(0, 84, 0, 42)
-	flybutton.Font = Enum.Font.SourceSans
-	flybutton.Text = "Click me to Fly"
-	flybutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-	flybutton.TextSize = 14.000
-	flybutton.MouseButton1Down:connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/mister-shay/fly-script-fix/main/flyfix", true))()
-		flybutton.Text = "Press R to fly and unfly"
-		flybutton.TextSize = 10.000
-	end)
-end)
 
 TextButton_11.Parent = ScrollingFrame
 TextButton_11.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_11.BorderColor3 = Color3.fromRGB(27, 42, 53)
 TextButton_11.BorderSizePixel = 0
-TextButton_11.Position = UDim2.new(0.0801320821, 0, 0.691299915, 0)
+TextButton_11.Position = UDim2.new(0.370310605, 0, 0.265659302, 0)
 TextButton_11.Size = UDim2.new(0, 55, 0, 52)
 TextButton_11.Font = Enum.Font.Sarpanch
-TextButton_11.Text = "Shed's Bypasser"
+TextButton_11.Text = "Chat Spammer"
 TextButton_11.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_11.TextScaled = true
-TextButton_11.TextSize = 25.000
+TextButton_11.TextSize = 24.000
 TextButton_11.TextWrapped = true
-TextButton_11.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
-end)
 
 TextButton_12.Parent = ScrollingFrame
 TextButton_12.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
 TextButton_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
 TextButton_12.BorderSizePixel = 0
-TextButton_12.Position = UDim2.new(0.673882067, 0, 0.263531655, 0)
+TextButton_12.Position = UDim2.new(0.37241143, 0, 0.0382165499, 0)
 TextButton_12.Size = UDim2.new(0, 55, 0, 52)
 TextButton_12.Font = Enum.Font.Sarpanch
-TextButton_12.Text = "Spectate"
+TextButton_12.Text = "clicktp"
 TextButton_12.TextColor3 = Color3.fromRGB(232, 237, 223)
 TextButton_12.TextScaled = true
-TextButton_12.TextSize = 24.000
+TextButton_12.TextSize = 20.000
 TextButton_12.TextWrapped = true
-TextButton_12.MouseButton1Down:connect(function()
-	gui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
-	nextb = Instance.new("TextButton", gui)
-	nextb.Position = UDim2.new(0.88,0,0.9,0)
-	nextb.Size = UDim2.new(0.1,0,0.07,0)
-	nextb.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
-	nextb.Text = "Next"
-	prevb = nextb:Clone()
-	prevb.Position = UDim2.new(0.02,0,0.9,0)
-	prevb.Text = "Previous"
-	prevb.Parent = gui
-	plrNum = 1
-	for i,v in pairs(game.Players:GetPlayers()) do
-		if i == plrNum then
-			game.Workspace.Camera.CameraSubject = v.Character.Humanoid
-		end
-	end
 
-	prevb.MouseButton1Down:connect(function()
-		if plrNum ~= 1 then
-			plrNum = plrNum - 1
-		end
-		for i,v in pairs(game.Players:GetPlayers()) do
-			if i == plrNum then
-				game.Workspace.Camera.CameraSubject = v.Character.Humanoid
-			end
-		end
-	end)
-
-	nextb.MouseButton1Down:connect(function()
-		if plrNum < #game.Players:GetPlayers() then
-			plrNum = plrNum + 1
-			for i,v in pairs(game.Players:GetPlayers()) do
-				if i == plrNum then
-					game.Workspace.Camera.CameraSubject = v.Character.Humanoid
-				end
-			end
-		end
-	end)
-end)
-
-TextButton_13.Parent = ScrollingFrame
-TextButton_13.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
-TextButton_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextButton_13.BorderSizePixel = 0
-TextButton_13.Position = UDim2.new(0.370310605, 0, 0.265659302, 0)
-TextButton_13.Size = UDim2.new(0, 55, 0, 52)
-TextButton_13.Font = Enum.Font.Sarpanch
-TextButton_13.Text = "Chat Spammer"
-TextButton_13.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_13.TextScaled = true
-TextButton_13.TextSize = 24.000
-TextButton_13.TextWrapped = true
-TextButton_13.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/L4SNxWrh"))()
-end)
-
-TextButton_14.Parent = ScrollingFrame
-TextButton_14.BackgroundColor3 = Color3.fromRGB(36, 36, 35)
-TextButton_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextButton_14.BorderSizePixel = 0
-TextButton_14.Position = UDim2.new(0.37241143, 0, 0.0382165499, 0)
-TextButton_14.Size = UDim2.new(0, 55, 0, 52)
-TextButton_14.Font = Enum.Font.Sarpanch
-TextButton_14.Text = "clicktp"
-TextButton_14.TextColor3 = Color3.fromRGB(232, 237, 223)
-TextButton_14.TextScaled = true
-TextButton_14.TextSize = 20.000
-TextButton_14.TextWrapped = true
-TextButton_14.MouseButton1Down:connect(function()
-	local mouse = game.Players.LocalPlayer:GetMouse()
-	local tool = Instance.new("Tool")
-
-	tool.RequiresHandle = false
-	tool.Name = "Click Teleport"
-	tool.Activated:connect(function()
-		local pos = mouse.Hit+Vector3.new(0,2.5,0)
-		pos = CFrame.new(pos.X,pos.Y,pos.Z)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
-	end)
-	tool.Parent = game.Players.LocalPlayer.Backpack
-end)
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.0542880632, 0, 0.0865232497, 0)
-TextLabel.Size = UDim2.new(0, 168, 0, 25)
-TextLabel.Font = Enum.Font.Sarpanch
-TextLabel.Text = "Dick Fart Gui"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 20.000
-TextLabel.TextWrapped = true
-TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Dick Fart Gui Loaded.", Text = "*dies of cringe*"})
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0402693711, 0, 0.0865232497, 0)
+TextLabel_2.Size = UDim2.new(0, 168, 0, 25)
+TextLabel_2.Font = Enum.Font.Sarpanch
+TextLabel_2.Text = "sigma gui"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 20.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
